@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        /* .container {
+            overflow: hidden
+        }
+
+        .tab {
+            float: left;
+        }
+
+        .tab-2 {
+            margin-left: 50px
+        }
+
+        .tab-2 input {
+            display: block;
+            margin-bottom: 10px
+        }*/
+
+        tr {
+            transition: all .25s ease-in-out
+        }
+
+        .table-hover tr:hover {
+            background-color: orange;
+            /* cursor: pointer; */
+        } 
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tab tab-2">
+            First Name : <input type="text" name="fname" id="fname"><br><br>
+            Last Name : <input type="text" name="lname" id="lname"><br><br>
+            Age : <input type="number" name="age" id="age"><br><br>
+
+            <button onclick="addHtmlTableRow()">Add</button>
+            <button onclick="updateRow()">update</button>
+        </div>
+        <div class="tab tab-1">
+            <table id="table" style="border :1px solid black" class="table  table-bordered table-striped table-dark">
+                <tr >
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+<script src="data.js"></script>
+
+</html>
