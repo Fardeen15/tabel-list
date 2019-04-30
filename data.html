@@ -26,31 +26,42 @@
             margin-bottom: 10px
         }*/
 
-        tr {
-            transition: all .25s ease-in-out
-        }
-
-        .table-hover tr:hover {
-            background-color: orange;
-            /* cursor: pointer; */
-        } 
         
+
+        .td {
+            height: 50px;
+        }
+        #updateBtn{
+            display: none;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <div class="tab tab-2">
-            First Name : <input type="text" name="fname" id="fname"><br><br>
-            Last Name : <input type="text" name="lname" id="lname"><br><br>
-            Age : <input type="number" name="age" id="age"><br><br>
-
-            <button onclick="addHtmlTableRow()">Add</button>
-            <button onclick="updateRow()">update</button>
+            <table>
+                <tr>
+                    <td class="input-group-text td" > First Name :</td>
+                    <td><input type="text" name="fname" id="fname" class="form-control td"><br><br></td>
+                </tr>
+                <tr>
+                    <td class="input-group-text td"> Last Name :</td>
+                    <td><input type="text" name="lname" id="lname" class="form-control td"><br><br></td>
+                </tr>
+                <tr>
+                    <td class="input-group-text td"> Age :</td>
+                    <td> <input type="number" name="age" id="age" class="form-control td"><br><br></td>
+                </tr>
+            </table>
+            <div class="btn-group btn-group-toggle">
+                <button onclick="addHtmlTableRow()" class="btn btn-secondary btn-lg active" id="addBtn">Add</button>
+                <button onclick="updateRow()" class="btn btn-secondary btn-lg active" id="updateBtn">update</button>
+            </div>
         </div>
         <div class="tab tab-1">
             <table id="table" style="border :1px solid black" class="table  table-bordered table-striped table-dark">
-                <tr >
+                <tr>
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Age</th>
