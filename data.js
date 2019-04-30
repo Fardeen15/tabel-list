@@ -33,8 +33,8 @@ function addData() {
         <td>${nameArr[i]}</td>
         <td>${secondname[i]}</td>
         <td>${Age[i]}</td>
-        <td><button onclick="removeSelectedRow(${i})" class="btn btn-outline-secondary">Remove</button></td>
-        <td><button onclick="editHtmlTbleSelectedRow(${i})" class="btn btn-outline-secondary">Edit</button></td>
+        <td><button onclick="removeSelectedRow(${i})" class=" btn-outline-secondary jsBtn">Remove</button></td>
+        <td><button onclick="editHtmlTbleSelectedRow(${i})" class=" btn-outline-secondary jsBtn">Edit</button></td>
         </tr>`
     }
 
@@ -61,8 +61,8 @@ function editHtmlTbleSelectedRow(b) {
     document.getElementById("lname").value = secondname[b]
     document.getElementById("age").value = Age[b]
     index = b
-    document.getElementById("updateBtn").style.display = "inline";
-    document.getElementById("addBtn").style.display = "none";
+    document.getElementById("updateBtn").removeAttribute("disabled")
+    document.getElementById("addBtn").setAttribute("disabled",true)
     // console.log(b)
     // console.log(nameArr[b],secondname[b],Age[b])
     // var firstname = document.getElementById("fname"[b]).value
@@ -77,8 +77,8 @@ function updateRow() {
     var age = document.getElementById("age").value;
 
 
-    document.getElementById("updateBtn").style.display = "none";
-    document.getElementById("addBtn").style.display = "inline";
+    document.getElementById("updateBtn").setAttribute("disabled",true)
+    document.getElementById("addBtn").removeAttribute("disabled")
 
     document.getElementById("fname").value = "";
     document.getElementById("lname").value = "";
