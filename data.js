@@ -89,7 +89,3 @@ function updateRow() {
     Age.splice(index, 1, age)
     addData()
 }
-
-
-
-
